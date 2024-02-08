@@ -14,6 +14,7 @@ import type { ThemeProp } from 'src/types';
 import { getTooltipPosition, Measurement } from './utils';
 import { useInternalTheme } from '../../core/theming';
 import { addEventListener } from '../../utils/addEventListener';
+import getIsWeb from '../../utils/getIsWeb';
 import Portal from '../Portal/Portal';
 import Text from '../Typography/Text';
 
@@ -72,8 +73,7 @@ const Tooltip = ({
   titleMaxFontSizeMultiplier,
   ...rest
 }: Props) => {
-  const isWeb = Platform.OS === 'web';
-
+  const isWeb = getIsWeb();
   const theme = useInternalTheme(themeOverrides);
   const [visible, setVisible] = React.useState(false);
 

@@ -3,7 +3,6 @@ import {
   Animated,
   I18nManager,
   LayoutChangeEvent,
-  Platform,
   StyleProp,
   StyleSheet,
   View,
@@ -14,6 +13,7 @@ import setColor from 'color';
 
 import { useInternalTheme } from '../core/theming';
 import type { ThemeProp } from '../types';
+import getIsWeb from '../utils/getIsWeb';
 
 export type Props = React.ComponentPropsWithRef<typeof View> & {
   /**
@@ -84,7 +84,7 @@ const ProgressBar = ({
   testID = 'progress-bar',
   ...rest
 }: Props) => {
-  const isWeb = Platform.OS === 'web';
+  const isWeb = getIsWeb();
   const theme = useInternalTheme(themeOverrides);
   const { current: timer } = React.useRef<Animated.Value>(
     new Animated.Value(0)
