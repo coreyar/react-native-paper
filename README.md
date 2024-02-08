@@ -1,3 +1,6 @@
+> [!WARNING]  
+> This is a work in progress to update react-native-paper to support windows and macos platforms
+
 <p align="center">
   <img alt="react-native-paper" src="docs/static/images/paper-logo.svg?sanitize=true" width="300">
 </p>
