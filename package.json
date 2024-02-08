@@ -1,7 +1,7 @@
 {
-  "name": "react-native-paper",
+  "name": "react-native-windows-paper",
   "version": "5.12.3",
-  "description": "Material design for React Native",
+  "description": "Material design for React Native with support for windows and macosx",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "react-native": "src/index.tsx",
